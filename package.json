@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
+    "postinstall": "patch-package",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "electron-builder -p never"
   },
@@ -12,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^27.1.2",
-    "electron-builder": "^24.9.2"
+    "electron-builder": "^24.9.2",
+    "patch-package": "^8.0.0"
   }
 }
