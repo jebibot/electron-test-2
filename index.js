@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require("electron");
+const { autoUpdater } = require("electron-updater");
 const path = require("node:path");
 
 const createWindow = () => {
@@ -11,6 +12,8 @@ const createWindow = () => {
   });
 
   mainWindow.loadFile("index.html");
+
+  autoUpdater.checkForUpdatesAndNotify().then(console.log).catch(console.error);
 };
 
 app.whenReady().then(() => {

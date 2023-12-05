@@ -14,12 +14,14 @@ win:
 
 mac:
   target:
-    - target: 'dmg'
+    - target: 'default'
       arch:
         - 'x64'
         - 'arm64'
   artifactName: '${name}-setup-${version}-${arch}.${ext}'
   category: 'public.app-category.developer-tools'
+  notarize:
+    teamId: S8QC4W95G9
 
 linux: 
   target: 'AppImage'
